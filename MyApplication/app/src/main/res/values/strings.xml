@@ -10,4 +10,8 @@
     <string name="theme">Theme</string>
     <string name="defaultpick">Default music style</string>
     <string name="title_activity_player">Player</string>
+    <string name="title_activity_comfy_player">ComfyPlayer</string>
+    <string name="rain">Rain Sounds</string>
+    <string name="fireplace">Fireplace</string>
+    <string name="song">Song</string>
 </resources>

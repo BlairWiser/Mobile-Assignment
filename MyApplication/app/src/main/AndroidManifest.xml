@@ -24,6 +24,10 @@
             android:name=".Player"
             android:label="@string/title_activity_player" >
         </activity>
+        <activity
+            android:name=".ComfyPlayer"
+            android:label="@string/title_activity_comfy_player" >
+        </activity>
     </application>
 
 </manifest>

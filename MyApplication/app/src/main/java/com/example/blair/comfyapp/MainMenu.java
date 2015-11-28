@@ -21,7 +21,7 @@ public class MainMenu extends AppCompatActivity {
     }
 
    public void callPlayer(View view) {
-       Intent playerIntent = new Intent(this, Player.class);
+       Intent playerIntent = new Intent(this, ComfyPlayer.class);
        startActivity(playerIntent);
 
    }
