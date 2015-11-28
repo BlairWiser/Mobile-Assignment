@@ -20,6 +20,10 @@
             android:name=".Preferences"
             android:label="@string/title_activity_preferences" >
         </activity>
+        <activity
+            android:name=".Player"
+            android:label="@string/title_activity_player" >
+        </activity>
     </application>
 
 </manifest>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ComfyApp</string>
+    <string name="app_name">Comfy App</string>
 
     <string name="play">Play</string>
 
@@ -9,4 +9,5 @@
     <string name="title_activity_preferences">Preferences</string>
     <string name="theme">Theme</string>
     <string name="defaultpick">Default music style</string>
+    <string name="title_activity_player">Player</string>
 </resources>

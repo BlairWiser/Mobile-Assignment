@@ -32,6 +32,7 @@ public class FontView extends View {
         font.setStyle(Paint.Style.STROKE);
 
         int x = 100, y = 100;
-        canvas.drawText("Comfy App", x, y, font);
+
+        canvas.drawText(getResources().getString(R.string.app_name), x, y, font);
     }
 }
