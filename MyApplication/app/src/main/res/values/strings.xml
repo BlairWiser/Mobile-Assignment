@@ -3,6 +3,11 @@
 
     <string name="play">Play</string>
 
+    <string name="pic_url">Picture URL:</string>
+    <string name="enter_url">Enter Image URL</string>
+    <string name="confirm">Confirm</string>
+    <string name="back">Back</string>
+
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 

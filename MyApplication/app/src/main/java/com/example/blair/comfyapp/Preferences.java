@@ -31,4 +31,8 @@ public class Preferences extends AppCompatActivity{
         boolean result = editor.commit();
         finish();
     }
+
+    public void backToMenu(View view) {
+        finish();
+    }
 }
