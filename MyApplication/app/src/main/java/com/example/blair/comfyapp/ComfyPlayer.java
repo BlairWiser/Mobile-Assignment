@@ -60,6 +60,7 @@ public class ComfyPlayer extends AppCompatActivity implements ImageListener {
                 fd = getAssets().openFd("fireplace.mp3");
                 firePlayer.setDataSource(fd.getFileDescriptor(), fd.getStartOffset(), fd.getLength());
                 firePlayer.prepare();
+                firePlayer.setLooping(true);
                 firePlayer.start();
             }catch (IllegalStateException e){
                 e.printStackTrace();
@@ -84,6 +85,8 @@ public class ComfyPlayer extends AppCompatActivity implements ImageListener {
                 fd = getAssets().openFd("rain.mp3");
                 rainPlayer.setDataSource(fd.getFileDescriptor(), fd.getStartOffset(), fd.getLength());
                 rainPlayer.prepare();
+                rainPlayer.setVolume(0.6f, 0.6f);
+                rainPlayer.setLooping(true);
                 rainPlayer.start();
             }catch (IllegalStateException e){
                 e.printStackTrace();
@@ -108,6 +111,7 @@ public class ComfyPlayer extends AppCompatActivity implements ImageListener {
                 fd = getAssets().openFd("soothing.mp3");
                 songPlayer.setDataSource(fd.getFileDescriptor(), fd.getStartOffset(), fd.getLength());
                 songPlayer.prepare();
+                songPlayer.setLooping(true);
                 songPlayer.start();
             }catch (IllegalStateException e){
                 e.printStackTrace();
@@ -123,8 +127,11 @@ public class ComfyPlayer extends AppCompatActivity implements ImageListener {
      * @param view
      */
     public void back(View view) {
+        songPlayer.stop();
         songPlayer.release();
+        firePlayer.stop();
         firePlayer.release();
+        rainPlayer.stop();
         rainPlayer.release();
         finish();
     }
