@@ -16,10 +16,19 @@ public class DownloadImageTask  extends AsyncTask<String, Void, Bitmap> {
 
     ImageListener listener;
 
+    /**
+     * Constructor that sets listener that will receive result
+     * @param listener The calling intent that will listen for result
+     */
     public DownloadImageTask(ImageListener listener) {
         this.listener = listener;
     }
 
+    /**
+     * Gets the image from the given url and returns it asynchronously
+     * @param urls The url of the image
+     * @return The resulting image
+     */
     protected Bitmap doInBackground(String... urls) {
         String url = urls[0];
         Bitmap image = null;
@@ -31,6 +40,8 @@ public class DownloadImageTask  extends AsyncTask<String, Void, Bitmap> {
         } catch (Exception e) {
             Log.e("error", e.getMessage());
             e.printStackTrace();
+
+            //TODO: set image to something if error occurs
         }
 
         return image;

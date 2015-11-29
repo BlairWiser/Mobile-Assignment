@@ -57,10 +57,11 @@
         android:layout_height="wrap_content"
         android:text="New Button"
         android:id="@+id/back"
-        android:layout_above="@+id/imageView"
-        android:layout_toRightOf="@+id/btnRain"
-        android:layout_toEndOf="@+id/btnRain"
-        android:onClick="back"/>
+        android:onClick="back"
+        android:layout_below="@+id/imageView"
+        android:layout_alignRight="@+id/btnRain"
+        android:layout_alignEnd="@+id/btnRain"
+        android:layout_marginTop="42dp" />
 
 
 </RelativeLayout>

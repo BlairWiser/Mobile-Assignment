@@ -17,9 +17,13 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-
     }
 
+    /**
+     * Handler function for Play button
+     * Calls the ComfyPlayer Activity
+     * @param view The calling button
+     */
    public void callPlayer(View view) {
        Intent playerIntent = new Intent(this, ComfyPlayer.class);
        startActivity(playerIntent);
