@@ -1,5 +1,8 @@
 package com.example.blair.comfyapp;
 
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -38,10 +41,8 @@ public class DownloadImageTask  extends AsyncTask<String, Void, Bitmap> {
             image = BitmapFactory.decodeStream(in);
 
         } catch (Exception e) {
-            Log.e("error", e.getMessage());
+            Log.e("Error", e.getMessage());
             e.printStackTrace();
-
-            //TODO: set image to something if error occurs
         }
 
         return image;

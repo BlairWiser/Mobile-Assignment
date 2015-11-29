@@ -47,7 +47,6 @@ public class ComfyPlayer extends AppCompatActivity implements ImageListener {
         String urlName = prefs.getString("urlName", "http://i.imgur.com/q9wAxs7.jpg");
 
         DownloadImageTask task = new DownloadImageTask(this);
-        // TODO: pass url from prefs into here
         task.execute(urlName);
     }
 
@@ -148,6 +147,12 @@ public class ComfyPlayer extends AppCompatActivity implements ImageListener {
      * @param image The resulting image from DownloadImageTask
      */
     public void setImage(Bitmap image) {
+        if (image == null){
+            SharedPreferences pref = getSharedPreferences("ComfyApp", Activity.MODE_PRIVATE);
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putString("urlName", "http://i.imgur.com/q9wAxs7.jpg");
+            editor.apply();
+        }
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
         imageView.setImageBitmap(image);
     }
