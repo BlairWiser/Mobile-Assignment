@@ -2,6 +2,7 @@ package com.example.blair.comfyapp;
 
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.provider.MediaStore;
@@ -12,10 +13,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import java.io.IOException;
 
-public class ComfyPlayer extends AppCompatActivity {
+public class ComfyPlayer extends AppCompatActivity implements ImageListener {
     MediaPlayer songPlayer;
     MediaPlayer rainPlayer;
     MediaPlayer firePlayer;
@@ -26,6 +28,10 @@ public class ComfyPlayer extends AppCompatActivity {
         firePlayer = new MediaPlayer();
         rainPlayer = new MediaPlayer();
         songPlayer = new MediaPlayer();
+
+        DownloadImageTask task = new DownloadImageTask(this);
+        // TODO: pass url from prefs into here
+        task.execute("https://i.warosu.org/data/ck/img/0048/94/1382641981330.jpg");
     }
 
     public void playFire(View view){
@@ -90,5 +96,10 @@ public class ComfyPlayer extends AppCompatActivity {
         firePlayer.release();
         rainPlayer.release();
         finish();
+    }
+
+    public void setImage(Bitmap image) {
+        ImageView imageView = (ImageView) findViewById(R.id.imageView);
+        imageView.setImageBitmap(image);
     }
 }
