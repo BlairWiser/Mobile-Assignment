@@ -5,6 +5,8 @@ package com.example.blair.comfyapp;
  * An image is also displayed that the user can change by giving a url in the preferences activity
  */
 
+import android.app.Activity;
+import android.content.SharedPreferences;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
@@ -40,9 +42,13 @@ public class ComfyPlayer extends AppCompatActivity implements ImageListener {
         rainPlayer = new MediaPlayer();
         songPlayer = new MediaPlayer();
 
+        String name = "ComfyApp";
+        SharedPreferences prefs = getSharedPreferences(name, Activity.MODE_PRIVATE);
+        String urlName = prefs.getString("urlName", "http://i.imgur.com/q9wAxs7.jpg");
+
         DownloadImageTask task = new DownloadImageTask(this);
         // TODO: pass url from prefs into here
-        task.execute("http://i.imgur.com/q9wAxs7.jpg");
+        task.execute(urlName);
     }
 
     /**

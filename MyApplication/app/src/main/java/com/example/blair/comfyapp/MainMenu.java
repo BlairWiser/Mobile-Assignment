@@ -1,6 +1,8 @@
 package com.example.blair.comfyapp;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.support.v7.app.AppCompatActivity;
@@ -30,6 +32,9 @@ public class MainMenu extends AppCompatActivity {
 
    }
 
-
+    public void openPreferences(View view){
+        Intent preferencesIntent = new Intent(this, Preferences.class);
+        startActivity(preferencesIntent);
+    }
 
 }

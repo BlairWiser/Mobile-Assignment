@@ -21,5 +21,15 @@
         android:layout_marginTop="139dp"
         android:onClick="callPlayer"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="prefrences"
+        android:id="@+id/button2"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:onClick="openPreferences"/>
+
 
 </RelativeLayout>
