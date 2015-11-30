@@ -28,22 +28,33 @@
         android:text="@string/confirm"
         android:id="@+id/setImage"
         android:layout_gravity="center_vertical"
-        android:onClick="setImageCall"/>
+        android:onClick="setImageCall"
+        android:textColor="@color/material_grey_50"
+        android:background="@color/accent_material_dark" />
 
     <Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/choose"
-    android:id="@+id/pickImage"
-    android:layout_gravity="center_vertical"
-    android:onClick="pickImage"/>
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:id="@+id/pickImage"
+        android:layout_gravity="center_vertical"
+        android:onClick="resetPref"
+        android:textColor="@color/material_grey_50"
+        android:background="@color/accent_material_dark"
+        />
 
     <Button
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/back"
         android:text="@string/back"
         android:onClick="backToMenu"
+        android:textColor="@color/material_grey_50"
+        android:background="@color/accent_material_dark"
         />
 
 

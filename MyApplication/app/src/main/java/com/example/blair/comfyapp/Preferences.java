@@ -37,6 +37,22 @@ public class Preferences extends AppCompatActivity{
         finish();
     }
 
+    public void resetPref(View view){
+        SharedPreferences pref = getSharedPreferences("ComfyApp", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putString("urlName", null);
+        boolean result = editor.commit();
+        finish();
+    }
+
+    public void backToMenu(View view) {
+        finish();
+    }
+}
+
+//Non implemented pick image from device
+
+/*
     public void pickImage(View view){
         Intent pickPicIntent = new Intent(Intent.ACTION_PICK);
         pickPicIntent.setType("image/*");
@@ -58,7 +74,4 @@ public class Preferences extends AppCompatActivity{
         }
     }
 
-    public void backToMenu(View view) {
-        finish();
-    }
-}
+    */
