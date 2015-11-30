@@ -18,7 +18,7 @@
 
     <EditText
         android:id="@+id/imageName"
-        android:text="@string/enter_url"
+        android:hint="@string/enter_url"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
 
