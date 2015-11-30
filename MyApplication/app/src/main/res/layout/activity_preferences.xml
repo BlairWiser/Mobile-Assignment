@@ -31,6 +31,14 @@
         android:onClick="setImageCall"/>
 
     <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/choose"
+    android:id="@+id/pickImage"
+    android:layout_gravity="center_vertical"
+    android:onClick="pickImage"/>
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/back"
